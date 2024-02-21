@@ -9,12 +9,12 @@ DMAdb user guide
 .. toctree::
    :maxdepth: 2
 
-   Access / login <access.rst>
+   Getting started <access.rst>
    Browse ISA details <misa.rst>
    Browse, view and search metabolomics datasets <mbrowse.rst>
    DMA Galaxy workflow <dma-galaxy-workflow.rst>
    
-   Admin <misa.rst>
+   Admin <admin.rst>
 
 API - django-mogi
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -23,7 +23,7 @@ Metabolome Organisation with Galaxy and ISA (imports all of the django-applicati
 .. toctree::
    :maxdepth: 2
 
-   django-mogi <django-mogi/index.rst>
+   API - django-mogi <django-mogi/index.rst>
 
 
 API - django-galaxy
@@ -44,7 +44,6 @@ Simple file management for generic files in Django
    :maxdepth: 2
 
    API - django-gfiles <django-gfiles/index.rst>
-
 
 
 About
