@@ -1,5 +1,5 @@
 django-mogi filters
 =========================================
 
-.. automodule:: mogi.filter
+.. automodule:: mogi.filter.filters_compounds
    :members:

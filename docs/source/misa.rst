@@ -19,7 +19,7 @@ any study descriptors.
 Multiple assays can then be added to each study.
 
 
-.. image:: misa-create-base.png
+.. image:: images/misa-create-base.png
 
 Browse and export ISA projects
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -31,7 +31,7 @@ Preliminary work has been made so that the ISA project can be exported as an ISA
 
 Currently only admin users can delete the projects via the standard Django admin interface (e.g. at 127.0.0.1:8000/admin).
 
-.. image:: summary-options.png
+.. image:: images/summary-options.png
 
 
 
@@ -44,7 +44,7 @@ Browse, update and delete ontology terms
 Where possible ontological terms are used to describe components of the ISA project. The full list of ontology terms
 used for a project can be searched, updated and viewed (see below)
 
-.. image:: ontology1.png
+.. image:: images/ontology1.png
 
 
 Add new terms
@@ -52,7 +52,7 @@ Add new terms
 New ontological terms can be added manually or can be searched using the EBI ontology Lookup service and the best
 term can be added into the local database of ontology terms.
 
-.. image:: ontology2.png
+.. image:: images/ontology2.png
 
 
 Protocols
@@ -65,7 +65,7 @@ Protocol models have been created based on the MetaboLights description for meta
 of sample collection, (liquid phase)-extraction, (solid phase)-extraction, chromatography,
 measurement (i.e. mass spectrometry type), data transformation and metabolite identification.
 
-.. image:: protocol1.png
+.. image:: images/protocol1.png
 
 Create, edit and delete protocols
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,7 +75,7 @@ field for a protocol is the **code_field** this is a unique small code for a pro
 uploaded data files to a specific protocol.
 
 
-.. image:: protocol2.png
+.. image:: images/protocol2.png
 
 Protocol types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,7 +84,7 @@ Where possible, protocols can be grouped together by different protocol types. F
 can be associated with either the Chromatography type 'HILIC' or 'reverse phase chromatography' (see below). A user can add and edit as many different
 protocol types as necessary.
 
-.. image:: protocol3.png
+.. image:: images/protocol3.png
 
 
 
@@ -95,13 +95,13 @@ Browse, create, update and delete study samples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Study samples can be browsed, created and edited.
 
-.. image:: study-sample1.png
+.. image:: images/study-sample1.png
 
 Study factors, organisms and organism parts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Each study factor can be associated with an organism and organism part as well as multiple study factors.
 
-.. image:: study-sample2.png
+.. image:: images/study-sample2.png
 
 
 Add study samples (batch)
@@ -137,7 +137,7 @@ will be extracted.
 See below for how to upload study samples as a batch:
 
 
-.. image:: study-sample3.png
+.. image:: images/study-sample3.png
 
 
 Study Factors
@@ -148,7 +148,7 @@ Browse, create, update and delete study factors
 Study factors can be either added manually (see below) or added with study samples in a batch process (see section
 **Add study samples (batch)** above)
 
-.. image:: study-factor1.png
+.. image:: images/study-factor1.png
 
 
 Organisms
@@ -158,7 +158,7 @@ Browse, create, update and delete organisms
 Organisms can be either added manually (see below) or added with study samples in a batch process (see section
 **Add study samples (batch)** above)
 
-.. image:: organism.png
+.. image:: images/organism.png
 
 Organism parts
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -167,7 +167,7 @@ Browse, create, update and delete organism parts
 Organisms parts can be either added manually (see below) or added with study samples in a batch process (see section
 **Add study samples (batch)** above)
 
-.. image:: organism_parts.png
+.. image:: images/organism_parts.png
 
 Assay details and data files
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -178,7 +178,7 @@ section **Create ISA backbone**. The assay should then be viewable in the Invest
 example:
 
 
-.. image:: assay_details1.png
+.. image:: images/assay_details1.png
 
 
 Upload data files and mapping
@@ -215,4 +215,4 @@ below for example format:
 | Mtab_FT_012611_13_2.mzML  |  Mtab_FT_012611_13  |  DIATOM            |  DOM	        | DOM    | NA       | SFRP            | NA                   | FT-ICR      | POSITIVE | 2                   | mzml       |
 +---------------------------+---------------------+--------------------+----------------+--------+----------+-----------------+----------------------+-------------+----------+---------------------+------------+
 
-.. image:: assay_details2.png
+.. image:: images/assay_details2.png

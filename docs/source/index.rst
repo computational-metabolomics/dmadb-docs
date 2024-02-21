@@ -9,11 +9,10 @@ DMAdb user guide
 .. toctree::
    :maxdepth: 2
 
-   Getting started <access.rst>
+   Getting started <getting-started.rst>
    Browse ISA details <misa.rst>
    Browse, view and search metabolomics datasets <mbrowse.rst>
    DMA Galaxy workflow <dma-galaxy-workflow.rst>
-   
    Admin <admin.rst>
 
 API - django-mogi

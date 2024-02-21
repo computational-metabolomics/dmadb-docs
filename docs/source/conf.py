@@ -9,7 +9,13 @@ author = 'University of Birmingham'
 release = '0.1'
 version = '0.1.0'
 
-# -- General configuration
+import django
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('../src'))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mogi.test_settings'
+django.setup()
 
 extensions = [
     'sphinx.ext.duration',

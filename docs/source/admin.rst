@@ -19,7 +19,7 @@ any study descriptors.
 Multiple assays can then be added to each study.
 
 
-.. image:: misa-create-base.png
+.. image:: images/misa-create-base.png
 
 Browse and export ISA projects
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -31,7 +31,7 @@ Preliminary work has been made so that the ISA project can be exported as an ISA
 
 Currently only admin users can delete the projects via the standard Django admin interface (e.g. at 127.0.0.1:8000/admin).
 
-.. image:: summary-options.png
+.. image:: images/summary-options.png
 
 
 
@@ -44,7 +44,7 @@ Browse, update and delete ontology terms
 Where possible ontological terms are used to describe components of the ISA project. The full list of ontology terms
 used for a project can be searched, updated and viewed (see below)
 
-.. image:: ontology1.png
+.. image:: images/ontology1.png
 
 
 Add new terms
@@ -52,7 +52,7 @@ Add new terms
 New ontological terms can be added manually or can be searched using the EBI ontology Lookup service and the best
 term can be added into the local database of ontology terms.
 
-.. image:: ontology2.png
+.. image:: images/ontology2.png
 
 
 Protocols
@@ -65,7 +65,7 @@ Protocol models have been created based on the MetaboLights description for meta
 of sample collection, (liquid phase)-extraction, (solid phase)-extraction, chromatography,
 measurement (i.e. mass spectrometry type), data transformation and metabolite identification.
 
-.. image:: protocol1.png
+.. image:: images/protocol1.png
 
 Create, edit and delete protocols
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,7 +75,7 @@ field for a protocol is the **code_field** this is a unique small code for a pro
 uploaded data files to a specific protocol.
 
 
-.. image:: protocol2.png
+.. image:: images/protocol2.png
 
 Protocol types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,7 +84,7 @@ Where possible, protocols can be grouped together by different protocol types. F
 can be associated with either the Chromatography type 'HILIC' or 'reverse phase chromatography' (see below). A user can add and edit as many different
 protocol types as necessary.
 
-.. image:: protocol3.png
+.. image:: images/protocol3.png
 
 
 
@@ -95,13 +95,13 @@ Browse, create, update and delete study samples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Study samples can be browsed, created and edited.
 
-.. image:: study-sample1.png
+.. image:: images/study-sample1.png
 
 Study factors, organisms and organism parts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Each study factor can be associated with an organism and organism part as well as multiple study factors.
 
-.. image:: study-sample2.png
+.. image:: images/study-sample2.png
 
 
 Add study samples (batch)
@@ -137,7 +137,7 @@ will be extracted.
 See below for how to upload study samples as a batch:
 
 
-.. image:: study-sample3.png
+.. image:: images/study-sample3.png
 
 
 Study Factors
@@ -148,7 +148,7 @@ Browse, create, update and delete study factors
 Study factors can be either added manually (see below) or added with study samples in a batch process (see section
 **Add study samples (batch)** above)
 
-.. image:: study-factor1.png
+.. image:: images/study-factor1.png
 
 
 Organisms
@@ -158,7 +158,7 @@ Browse, create, update and delete organisms
 Organisms can be either added manually (see below) or added with study samples in a batch process (see section
 **Add study samples (batch)** above)
 
-.. image:: organism.png
+.. image:: images/organism.png
 
 Organism parts
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -167,7 +167,7 @@ Browse, create, update and delete organism parts
 Organisms parts can be either added manually (see below) or added with study samples in a batch process (see section
 **Add study samples (batch)** above)
 
-.. image:: organism_parts.png
+.. image:: images/organism_parts.png
 
 Assay details and data files
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -178,7 +178,7 @@ section **Create ISA backbone**. The assay should then be viewable in the Invest
 example:
 
 
-.. image:: assay_details1.png
+.. image:: images/assay_details1.png
 
 
 Upload data files and mapping
@@ -215,4 +215,69 @@ below for example format:
 | Mtab_FT_012611_13_2.mzML  |  Mtab_FT_012611_13  |  DIATOM            |  DOM	        | DOM    | NA       | SFRP            | NA                   | FT-ICR      | POSITIVE | 2                   | mzml       |
 +---------------------------+---------------------+--------------------+----------------+--------+----------+-----------------+----------------------+-------------+----------+---------------------+------------+
 
-.. image:: assay_details2.png
+.. image:: images/assay_details2.png
+
+
+  Interact with Galaxy
+========================================
+
+The functionality is summarised at http://127.0.0.1:8000/galaxy/
+
+Register Galaxy details
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Register Galaxy instance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A Galaxy instance needs to be registered before any of the django-galaxy functionality can be used. If the Galaxy
+instance is accessible directly via the files system of a symbolic link on the file system then a the root of the Galaxy
+path should be included when registering. Alternatively the FTP site for the Galaxy instance can be recorded.
+
+.. image:: images/galaxy1.png
+
+Register Galaxy user
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Each MOGI user (e.g. Django user) can be registered to any of the registered Galaxy instance. The API key that has is
+provided by the user allows permission of the Galaxy instance API to be used.
+
+.. image:: images/galaxy2.png
+
+Upload ISA projects to Galaxy data library
+''''''''''''''''''''''''''''''''''''''''''''''''''
+If a ISA project has be created and data has been uploaded into an assay. This data can be uploaded into the Galaxy
+Data libraries. If the Galaxy instance is on the same file system (or accessible by a symbolic link) then the files
+can be uploaded as symbolic links. This is useful if there is limited space available for Galaxy instance. Alternatively
+the files can be uploaded via FTP.
+
+.. image:: images/galaxy3.png
+
+Run Workflows
+''''''''''''''''''''''''''''''''''''''''''''''''''
+All workflows for each Galaxy instances can be synced with MOGI (Django) so they can be run directly from the MOGI
+interface. If any new Galaxy workflow has been added to an instance make sure the **sync** button is pressed.
+
+.. image:: images/galaxy4.png
+
+Once the data files have been uploaded onto a Galaxy instance (see section
+**Upload ISA projects to Galaxy data library**. The files will be visible when a user chooses to perform
+a workflow. The relevant files can be filtered based on what protocol or sample was used. A samplelist is
+automatically when an ISA project is uploaded into the Galaxy data libraries. This can be useful if a samplelist is
+needed for the data analysis.
+
+.. image:: images/galaxy5.png
+
+
+View Galaxy histories
+''''''''''''''''''''''''''''''''''''''''''''''''''
+All histories for each Galaxy instances are summarised within MOGI.
+
+.. image:: images/galaxy6.png
+
+
+LC-MS(/MS) annotation workflow and importing data to MOGI
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+An LC-MS(/MS) annotation workflow is provided within the mogi docker. The worklfow performs various data processing and
+annotation steps and generates an SQLite database containing all the relevant peak and annotation information. The
+final step of the workflow allows this SQLite database to be exported to the MOGI database.
+
+.. image:: images/galaxy-workflow.svg
+
+More details to come!
