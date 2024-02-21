@@ -13,6 +13,7 @@ DMAdb user guide
    Browse ISA details <misa.rst>
    Browse, view and search metabolomics datasets <mbrowse.rst>
 
+   DMA Galaxy workflow <galaxy-workflow.rst>
    Manage Metabolomic ISA projects (admin only) <misa.rst>
    Galaxy interactions (admin only) <galaxy.rst>
 

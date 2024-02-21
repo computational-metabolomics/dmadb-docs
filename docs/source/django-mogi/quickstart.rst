@@ -7,8 +7,6 @@ Quick start
     INSTALLED_APPS = [
         ...
         'mogi',
-        'misa',
-        'mbrowse',
         'galaxy',
         'gfiles',
 
@@ -26,8 +24,6 @@ Quick start
 
     url(r'^', include('gfiles.urls')),
     url('mogi/', include('mogi.urls')),
-    url('mbrowse/', include('mbrowse.urls')),
-    url('misa/', include('misa.urls')),
     url('galaxy/', include('galaxy.urls')),
 
 
