@@ -12,10 +12,9 @@ DMAdb user guide
    Access / login <access.rst>
    Browse ISA details <misa.rst>
    Browse, view and search metabolomics datasets <mbrowse.rst>
-
-   DMA Galaxy workflow <galaxy-workflow.rst>
-   Manage Metabolomic ISA projects (admin only) <misa.rst>
-   Galaxy interactions (admin only) <galaxy.rst>
+   DMA Galaxy workflow <dma-galaxy-workflow.rst>
+   
+   Admin <misa.rst>
 
 API - django-mogi
 ''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -27,24 +26,24 @@ Metabolome Organisation with Galaxy and ISA (imports all of the django-applicati
    django-mogi <django-mogi/index.rst>
 
 
-django-galaxy
+API - django-galaxy
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 Django interfacing with Galaxy. Backend using the bioblend API.
 
 .. toctree::
    :maxdepth: 2
 
-   django-galaxy  <django-galaxy/index.rst>
+   API - django-galaxy  <django-galaxy/index.rst>
 
 
-django-gfiles
+API - django-gfiles
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 Simple file management for generic files in Django
 
 .. toctree::
    :maxdepth: 2
 
-   django-gfiles <django-gfiles/index.rst>
+   API - django-gfiles <django-gfiles/index.rst>
 
 
 
