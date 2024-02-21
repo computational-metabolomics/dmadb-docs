@@ -25,3 +25,34 @@ Metabolome Organisation with Galaxy and ISA (imports all of the django-applicati
    :maxdepth: 2
 
    django-mogi <django-mogi/index.rst>
+
+
+django-galaxy
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Django interfacing with Galaxy. Backend using the bioblend API.
+
+.. toctree::
+   :maxdepth: 2
+
+   django-galaxy  <django-galaxy/index.rst>
+
+
+django-gfiles
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Simple file management for generic files in Django
+
+.. toctree::
+   :maxdepth: 2
+
+   django-gfiles <django-gfiles/index.rst>
+
+
+
+About
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. toctree::
+
+   Contacts  <contacts.rst>
+
+

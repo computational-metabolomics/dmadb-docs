@@ -9,7 +9,6 @@ Contacts
 Tom Lawson
 ''''''''''''''''''''''
 | Computational metabolomics
-| Metabolomics and System Toxicology Laboratory
 | University of Birmingham, United Kingdom
 | tnl495@bham.ac.uk
 |
@@ -38,7 +37,6 @@ Martin Jones
 Mark Viant
 ''''''''''''''''''''''
 | Metabolomics and System Toxicology Laboratory
-| Phenome Centre Birmingham (PCB)
 | School of Bioscience, University of Birmingham, United Kingdom
 | m.viant@bham.ac.uk
 |
