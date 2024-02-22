@@ -10,7 +10,7 @@ Tom Lawson
 ''''''''''''''''''''''
 | Computational metabolomics
 | University of Birmingham, United Kingdom
-| tnl495@bham.ac.uk
+| t.n.lawson@bham.ac.uk
 |
 |
 
