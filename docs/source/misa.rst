@@ -1,12 +1,26 @@
 .. _misa-user-docs:
 
-Manage Metabolomic ISA projects
-========================================
+Deep Metabolome Annotation (DMA) ISA projects
+################################################
 
-The functionality is summarised along with any current ISA projects at http://127.0.0.1:8000/misa/
+https://dmadb.bham.ac.uk/misa/
 
 
-Create ISA backbone
+Browse ISA projects
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Standard users and guests can browse the available ISA projects. Further details of each ISA project can 
+be shown by clicking on the details section.
+
+Preliminary work has been made so that the ISA project can be exported as an ISA-JSON file.
+
+
+.. image:: images/summary-options.png
+
+
+
+
+Create ISA project (Admin only)
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 To initiate an ISA project the backbone of the ISA project has to be created. e.g. the investigation, study and assay
@@ -21,33 +35,21 @@ Multiple assays can then be added to each study.
 
 .. image:: images/misa-create-base.png
 
-Browse and export ISA projects
-''''''''''''''''''''''''''''''''''''''''''''''''''
-
-Once an investigation has been created. The ISA project will be visible in the summary table. Further details can
-then be shown by clicking on the details section.
-
-Preliminary work has been made so that the ISA project can be exported as an ISA-JSON file.
-
-Currently only admin users can delete the projects via the standard Django admin interface (e.g. at 127.0.0.1:8000/admin).
-
-.. image:: images/summary-options.png
-
 
 
 Ontologies
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
 
-Browse, update and delete ontology terms
+Ontology terms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Where possible ontological terms are used to describe components of the ISA project. The full list of ontology terms
-used for a project can be searched, updated and viewed (see below)
+Where possible ontological terms are used to describe components of the Deep Metabolome Annotation ISA project. The full list of ontology terms
+used for a project can be searched and viewed. Where the admin user can add and update.
 
 .. image:: images/ontology1.png
 
 
-Add new terms
+Add new terms (Admin only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 New ontological terms can be added manually or can be searched using the EBI ontology Lookup service and the best
 term can be added into the local database of ontology terms.
@@ -67,7 +69,7 @@ measurement (i.e. mass spectrometry type), data transformation and metabolite id
 
 .. image:: images/protocol1.png
 
-Create, edit and delete protocols
+Create, edit and delete protocols (Admin only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A user can view, edit and delete protocols, see below for example using the Chromatography protocol. An important
@@ -81,7 +83,7 @@ Protocol types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Where possible, protocols can be grouped together by different protocol types. For example a Chromatography protocol
-can be associated with either the Chromatography type 'HILIC' or 'reverse phase chromatography' (see below). A user can add and edit as many different
+can be associated with either the Chromatography type 'HILIC' or 'reverse phase chromatography' (see below). An admin user can add and edit as many different
 protocol types as necessary.
 
 .. image:: images/protocol3.png
@@ -91,9 +93,9 @@ protocol types as necessary.
 
 Study samples
 ''''''''''''''''''''''''''''''''''''''''''''''''''
-Browse, create, update and delete study samples
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Study samples can be browsed, created and edited.
+Study samples describe the sample used for the Deep Metabolome Annotation.
+
+Study samples can be browsed by any user. Admin users can also create, edit and delete.
 
 .. image:: images/study-sample1.png
 
@@ -104,7 +106,7 @@ Each study factor can be associated with an organism and organism part as well a
 .. image:: images/study-sample2.png
 
 
-Add study samples (batch)
+Batch add study samples (Admin only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For studies with many samples it is recommended to batch upload the study samples. Relevant ontology terms will be
 automatically uploaded based on the sample list provided. The columns of the sample list should consist of the
@@ -142,38 +144,36 @@ See below for how to upload study samples as a batch:
 
 Study Factors
 ''''''''''''''''''''''''''''''''''''''''''''''''''
-Browse, create, update and delete study factors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Study factors provide ways of adding relevant variables for the study samples.
 
-Study factors can be either added manually (see below) or added with study samples in a batch process (see section
-**Add study samples (batch)** above)
+Due to the nature of the original Deep Metabolome Annotation work with Daphnia magna involving one biological sample, the study factors were not considered. 
+
+However DMAdb does have functionality to incoporate.
 
 .. image:: images/study-factor1.png
 
 
 Organisms
 ''''''''''''''''''''''''''''''''''''''''''''''''''
-Browse, create, update and delete organisms
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Organisms can be either added manually (see below) or added with study samples in a batch process (see section
-**Add study samples (batch)** above)
+The organism for which the DMA project was performed on.
+
+Admins are able to either add manually (see below) or added with study samples in a batch process (see section "Batch add study samples")
 
 .. image:: images/organism.png
 
 Organism parts
 ''''''''''''''''''''''''''''''''''''''''''''''''''
-Browse, create, update and delete organism parts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Organisms parts can be either added manually (see below) or added with study samples in a batch process (see section
-**Add study samples (batch)** above)
+The organism part for which the DMA project was performed on.
+
+Admins are able to either added manually (see below) or added with study samples in a batch process (see section "Batch add study samples")
 
 .. image:: images/organism_parts.png
 
 Assay details and data files
 ''''''''''''''''''''''''''''''''''''''''''''''''''
-Select assay
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-To upload data files (e.g. mzML) to an assay, first an assay needs to have been created for the appropriate study (see
+All users are able to browse and view the assays of a DMA ISA project.
+
+Admin users are able to upload data files (e.g. mzML) to an assay, first an assay needs to have been created for the appropriate study (see
 section **Create ISA backbone**. The assay should then be viewable in the Investigation details section. See below for
 example:
 
@@ -181,7 +181,7 @@ example:
 .. image:: images/assay_details1.png
 
 
-Upload data files and mapping
+Upload data files and mapping (Admin only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Data files (e.g. mzML, raw) should be uploaded to the appriopiate assay for a study. This can either be done by
 uploading a zip file of the data files or providing a path to the data files if the file system is available.
