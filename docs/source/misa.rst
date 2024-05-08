@@ -3,13 +3,12 @@
 Deep Metabolome Annotation (DMA) ISA projects
 ################################################
 
-https://dmadb.bham.ac.uk/misa/
-
+`dmadb.bham.ac.uk/misa/ <https://dmadb.bham.ac.uk/misa/>`_
 
 Browse ISA projects
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
-Standard users and guests can browse the available ISA projects. Further details of each ISA project can 
+Registered users and guests can browse the available ISA projects. Further details of each ISA project can 
 be shown by clicking on the details section.
 
 Preliminary work has been made so that the ISA project can be exported as an ISA-JSON file.

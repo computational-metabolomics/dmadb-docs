@@ -10,9 +10,8 @@ DMAdb user guide
    :maxdepth: 1
 
    Getting started <getting-started.rst>
-   DMA of Daphnia magna <daphniamagna.rst>
    Data & results <dataandresults.rst>
-   ISA details <misa.rst>
+   ISA <misa.rst>
    Galaxy <dma-galaxy-workflow.rst>
    Running locally <local.rst>
 

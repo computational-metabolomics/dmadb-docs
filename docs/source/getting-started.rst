@@ -36,8 +36,8 @@ User permissions
 There are three main users of the site. 
 
 * **Guest users** (not logged in) - These users are able to browse the data within DMAdb but are not able to run searches across the annotations and data.
-* **Standard users** - These users have access to browse, perform searches (including spectral matching) and save the searches.
-* **Admin users** - that have access to upload and edit data, run analysis via a linked Galaxy instance and upload data analysis results.
+* **Registered users** - These users have access to browse, perform searches (including spectral matching) and save the searches.
+* **Admin users** - These users have all the access of standard registered user but also have access to upload and edit data, run analysis via a linked Galaxy instance and upload data analysis results.
 
 
 
@@ -48,7 +48,7 @@ The site has five sections (Dashboard, ISA, Galaxy, Data & Results and About).
 
 
 * **Dashboard** - A simple overview of the data within DMAdb
-* **ISA** - The section details the experimental data within DMAdb represented in the ISA structure (i.e. 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model). Standard and guest users are able to look through the study structure DMA projects. Whereas admin users are able to upload new ISA projects into DMAdb. We note that DMAdb only currently only consists of one project. The Deep Metabolome Annotation of *D. magna*
-* **Galaxy** - This section details the Galaxy instance(s) linked to the DMAdb instance. Standard and guest users can only view the linked Galaxy instances but are not able to perform any other actions. The admin user can add new instances and associated users, upload data and run workflows. 
-* **Data & Results** - This section allows standard users to browse the annotations, data files and individually processed and annotated datasets. As well as searching the annotations either via searching of exact masses or via spectral matching. Guest have more limited browse and search permissions. Admin users are able to upload the annotations and processed datasets.
+* **ISA** - The section details the experimental data within DMAdb represented in the ISA structure (i.e. 'Investigation' (the project context), 'Study' (a unit of research) and 'Assay' (analytical measurement) data model). Registered and guest users are able to look through the study structure DMA projects. Whereas admin users are able to upload new ISA projects into DMAdb. We note that DMAdb only currently only consists of one project. The Deep Metabolome Annotation of *D. magna*
+* **Galaxy** - This section details the Galaxy instance(s) linked to the DMAdb instance. Registered and guest users can only view the linked Galaxy instances but are not able to perform any other actions. The admin user can add new instances and associated users, upload data and run workflows. 
+* **Data & Results** - This section allows registered users to browse the annotations, data files and individually processed and annotated datasets. As well as searching the annotations either via searching of exact masses or via spectral matching. Guest have more limited browse and search permissions. Admin users are able to upload the annotations and processed datasets.
 * **About** - Contact and funding details

@@ -1,6 +1,6 @@
 .. _dataandresults-docs:
 
-Data and results
+Deep Metabolome Annotation Data and Results
 #####################
 
 `dmadb.bham.ac.uk/data_and_results_summary/ <https://dmadb.bham.ac.uk/data_and_results_summary/>`_
@@ -111,7 +111,7 @@ The raw (and .mzML) data files can be browsed, filtered and downloaded from `dma
 
 
 
-Browse datasets and view peaklists
+Browse analysis datasets
 **********************************************************
 The DMA Galaxy workflow outputs as a result an SQLite file for each DMA assay that has been analysed (incoporating the annotation and peak information from LC-MS, LC-MS/MS, DIMS and DIMSn data).
 
@@ -138,9 +138,16 @@ First the user can select the processed data file to choose from via using the f
 
 .. figure:: images/data_and_results_4.png
     
-  Fig 4. Select dataset to inspect
+  Fig 4. Select an filter analysis datasets
 
-For each dataset a summary of all features and the associated annotations is then shown which in turn can be filtered.
+For each dataset a annotations and peaks can then be inspected which in turn can be filtered. 
+
+.. figure:: images/data_and_results_5.png
+    
+  Fig 4. View (an filer) annotations and peaks from a specific analysis dataset
+
+See below for definitions of columns:
+
 
 .. list-table:: 
    :widths: 25 50
@@ -186,34 +193,136 @@ For each dataset a summary of all features and the associated annotations is the
 The weighted scores for "Sm score", "MetFrag score", "Sirius score", "Ms1 lookup score" and "Biosim max score" are all show in the table with the suffix **"wscore"**. See the DMA alaxy workflow for details of the weightings used.
 
 
-Views of the extracted ion chromatogram and fragmentation data can the be viewed.
+Views of the extracted ion chromatogram and fragmentation data can also be viewed.
 
 The fragmentation data shown for both the individual spectra, the averaged spectra within the a file (intra) and the averaged spectra across all files (inter.)
 
-
-.. figure:: images/data_and_results_5.png
+.. figure:: images/data_and_results_6.png
     
-  Fig 5. Filter the features of the dataset and view EIC and fragmentation data
+  Fig 6. view EIC and fragmentation data
 
 The mass spectrometry fragmentation based fragmentation annotation results from DMA Galaxy workflow can also be viewed in further detail (Spectral matching, MetFrag and SIRIUS CSI:FingerID)
 
 
-.. figure:: images/data_and_results_6.png
+.. figure:: images/data_and_results_7.png
     
-  Fig 6. View the mass spectrometry fragmentation based fragmentation annotations derived from the DMA Galaxy workflow (Spectral matching, MetFrag and SIRIUS CSI:FingerID)
+  Fig 7. View the mass spectrometry fragmentation based fragmentation annotations derived from the DMA Galaxy workflow (Spectral matching, MetFrag and SIRIUS CSI:FingerID)
 
 
-Search exact mass of annotations
+Exact mass search
 **********************************************************
 
+A registered user can search all the annotations in batch via monoisotopic exact masses `dmadb.bham.ac.uk/search_mono/ <https://dmadb.bham.ac.uk/search_mono/>`_.
 
 
-Spectral matching of mass spectrometry fragmentation data 
+
+.. figure:: images/data_and_results_8.png
+    
+  Fig 8. Search monoisotopic exact mass of annotations
+
+The results are are stored in the `Monoisotopic exact mass search results <https://dmadb.bham.ac.uk/search_mono_param/>`_ section. 
+
+Where each row corresponds to batch query and the columns provide details of the parameters used for the search
+
+.. figure:: images/data_and_results_9.png
+    
+  Fig 9. View all results from monoisotopic exact mass searches
+
+The individual matches from the search can then be inspected within the match table. Where each row corresponds to a single match between a query monoisotopic mass and a monoisotopic mass within the available annotations in DMAdb.
+
+The match table includes the relevant ppmdifference of the queried mass and the mass in the library, as well as all the information regarding the compound detailed in `dmadb.bham.ac.uk/compounds/ <https://dmadb.bham.ac.uk/compounds/>`_
+
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+
+   * - Column name
+     - Description
+   * - Ppm tolerance
+     - PPM tolerance used as parameter for search
+   * - User
+     - User who performed the search
+   * - Ppmdiff
+     - The PPM difference between the query mass and the mass in DMAdb
+
+
+Fragmentation spectra search
 **********************************************************
 
+A registered user can search query fragmentation spectra against all the fragmentation spectra within DMAdb, see `dmadb.bham.ac.uk/search_frag/ <https://dmadb.bham.ac.uk/search_frag/>`_.
 
-Upload annotations and datasets (admin only)
+The DMAdb library spectra that can be searched consist of all the averaged spectra from the LC-MS/MS and DIMSn data. 
+
+For the LC-MS/MS fragmentation spectra this includes the averaged spectra within a file (intra) and the averaged spectra across the files (inter).
+
+By default the datasets containing the metabolite reference standards will be avoided but they can be optionally included.
+
+.. figure:: images/data_and_results_10.png
+    
+  Fig 10. Search query fragmentation
+
+Each set of search results are saved in the `Fragmentation search results <https://dmadb.bham.ac.uk/search_frag_param/>`_ section.
+
+.. figure:: images/data_and_results_11.png
+    
+  Fig 11. View all results from fragmentation searches
+
+The individual matches from the search can then be inspected within the match table. Where each row corresponds to a single match between the query fragmentation spectra and the fragmentation spectra within DMAdb.
+
+See below for descriptions of the match columns
+
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+
+   * - Column name
+     - Description
+   * - Dpc
+     - Dot product cosine match result
+   * - Q prec mz
+     - The query precursor *m/z* (provided by user)
+   * - L prec mz
+     - The library precursor *m/z* (from the DMAdb spectra)
+   * - Ppm diff prec
+     - PPM difference between query and library precursor    
+   * - Rt
+     - Retention time of library spectra
+   * - Well
+     - The well fraction of the library spectra, if library spectra from LC-MS fractionation experiment
+   * - Dataset pid
+     - Library spectra identifier from within SQLite file for this dataset specific to the LC-MS/MS data
+   * - Dataset sid
+     - Library spectra identifier from within SQLite file for this dataset specific to the DIMSn data
+   * - Spectrum type
+     - Library spectra spectrum type, i.e. if the data is LC-MS/MS averaged (intra or inter) or averaged from DIMSn data
+   * - Spectrum details
+     - Library spectra further details of the library spectra if available
+   * - Dataset
+     - The DMAdb id of the analysis dataset which the library spectra originated from
+   * - Name
+     - The assay name associated with this library spectra
+   * - Sqlite
+     - The link to the SQLite analysis dataset which the library spectra originated from (note this might not be available for download depending on access issues)
+   * - Top spectral match
+     - Top spectral match result for this library spectra
+   * - Top metfrag
+     - Top MefFrag results for this library spectra
+   * - Top sirius csifingerid
+     - Top SIRIUS CSI:FingerID result for this library spectra
+   * - Top combined annotation
+     - Top combined annotation (see DMA Galaxy workflow details for combining approach) for this library spectra
+   * - Top wscore
+     - Top weighted score (see DMA Galaxy workflow details for weighting approach) for this library spectra 
+
+Individual matches can be inspected in more detail, see below. Where the spectral match plot can be viewed between the query and the matched library spectra. Further details of the annotation results of the library spectra is provided as well.
+
+
+.. figure:: images/data_and_results_12.png
+    
+  Fig 12. Further details for spectral match
+
+
+Upload (admin only)
 **********************************************************
 
-
-
+Admin users can upload analysis datasets via the `Upload analysis datasets <https://dmadb.bham.ac.uk/upload_datasets/>`_ and a summary list of compounds via the `Upload compounds <https://dmadb.bham.ac.uk/upload_compounds/>`_ section.
