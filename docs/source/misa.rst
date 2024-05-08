@@ -1,6 +1,6 @@
 .. _misa-user-docs:
 
-Deep Metabolome Annotation (DMA) ISA projects
+DMA ISA projects
 ################################################
 
 `dmadb.bham.ac.uk/misa/ <https://dmadb.bham.ac.uk/misa/>`_

@@ -1,19 +1,36 @@
 .. _dma-galaxy-workflow-docs:
-Galaxy
+DMA Galaxy
 ##########
 
 `dmadb.bham.ac.uk/galaxy/ <https://dmadb.bham.ac.uk/galaxy/>`_
 
+
 DMA Galaxy Workflow
 ******************************************
 
-Details of the DMA Galaxy workflow....
+The main source of annotation results with DMAdb come from the DMA Galaxy workflow.
+
+The workflow was created to handle data coming from LC fractionation experiments with multiple types of fragmentation data (LC-MS, LC-MS/MS, DIMS and DIMSn). 
+
+Where by multiple wells of eluent (fractions) was collected whilst performed LC-MS and LC-MS/MS measurements. These fractions then underwent additional mass spectrometry analysis in the form of DIMS and DIMSn. The DIMSn consisting of multiple collision energies and multiple stage fragmentation.
+
+The data is derived from both a single biological sample (i.e. a pooled *Daphnia magna* sample) and an equivelent blank sample to perform blank subtraction of features (where necessary).
 
 
+.. figure:: images/workflow_place_holder.svg
+    
+  Fig 12. DMA Galaxy workflow (image to be added following publication release)
 
 
+For DMA of *D. magna*, the DMA Galaxy workflow was ran for each "assay" based on the ISA mapping of the project within DMAdb. 
 
+All the relevant data from the DMA of *D. magna* had been uploaded into registered Galaxy instance (and structured within the ISA mapping - see the `DMA Galaxy library <https://dma.galaxy.bham.ac.uk/library/folders/F039bd4581e6624a3>`_). 
 
+This meant that DMA workflow could be ran directly via the Galaxy interface or via a Bioblend script that has access to the DMAdb Django API. For less complicated workflows the DMAdb interface could also be used, however this becomes in practical when multiple data inputs and parameters are to be used.
+
+The final output of the DMA Galaxy workflow for each assay is an SQLite file that contains all details of the annotations and relevant peak, mass spectrometry scan and file information.
+
+These SQLite files can then be uploaded, viewed and searched within DMAdb (see :ref:`dataandresults-docs`).
 
 
 

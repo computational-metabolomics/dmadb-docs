@@ -1,6 +1,6 @@
 .. _dataandresults-docs:
 
-Deep Metabolome Annotation Data and Results
+DMA Data and Results
 #####################
 
 `dmadb.bham.ac.uk/data_and_results_summary/ <https://dmadb.bham.ac.uk/data_and_results_summary/>`_
