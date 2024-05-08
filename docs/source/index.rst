@@ -13,7 +13,6 @@ DMAdb user guide
    Data & results <dataandresults.rst>
    ISA <misa.rst>
    Galaxy <dma-galaxy-workflow.rst>
-   Running locally <local.rst>
 
 
 API
