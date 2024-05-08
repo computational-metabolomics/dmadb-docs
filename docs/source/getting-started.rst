@@ -19,7 +19,9 @@ DMA projects consist of large scale attempts to annotate as many compounds as po
 The DMAdb site is built of from three Django applications, which are designed to be used together to provide a comprehensive solution for managing and analysing metabolomics data. The Django applications are: django-mogi, django-galaxy and django-gfiles.
 
 
-
+.. figure:: images/dmadb_summary.svg
+    
+  Fig 1. DMAdb summary
 
 Logging into DMAdb
 ********************

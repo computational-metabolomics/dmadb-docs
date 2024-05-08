@@ -5,6 +5,11 @@ DMA ISA projects
 
 `dmadb.bham.ac.uk/misa/ <https://dmadb.bham.ac.uk/misa/>`_
 
+
+.. figure:: images/misa_summary.png
+   
+   Fig 1. Summary of ISA structure within DMAdb. (1) ISA backbone of investigation, study and assay is created. (2) Study samples and relevant study factor details are recorded for the ISA project. (3) Protocols for keys steps in the metabolomics experiments are created. When a protocol is recorded as being used, a relevant process object is created that details relevant ‘run time’ information. (4) Ontological terms are used for the ISA backbone, study factors and protocols and processes. (5) Metabolomics data files can be uploaded to a relevant assay
+
 Browse ISA projects
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 
