@@ -10,9 +10,10 @@ DMAdb user guide
    :maxdepth: 1
 
    Getting started <getting-started.rst>
-   Data & results <dataandresults.rst>
    ISA <misa.rst>
    Galaxy <dma-galaxy-workflow.rst>
+   Data & results <dataandresults.rst>
+   
 
 
 API

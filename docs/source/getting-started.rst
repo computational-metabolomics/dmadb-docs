@@ -16,8 +16,11 @@ DMA projects consist of large scale attempts to annotate as many compounds as po
 
 **Note that the data present in the current iteration of the DMAdb site is currently only derived from the Deep Metabolome Annotation of Daphnia magna**.
 
-The DMAdb site is built of from three Django applications, which are designed to be used together to provide a comprehensive solution for managing and analysing metabolomics data. The Django applications are: django-mogi, django-galaxy and django-gfiles.
+The DMAdb site is built of from three Django applications, which are designed to be used together to provide a comprehensive solution for managing and analysing metabolomics data. See below:
 
+* django-mogi
+* django-galaxy  
+* django-gfiles
 
 .. figure:: images/dmadb_summary.svg
     
