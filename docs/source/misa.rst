@@ -187,7 +187,7 @@ example:
 
 Upload data files and mapping (Admin only)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Data files (e.g. mzML, raw) should be uploaded to the appriopiate assay for a study. This can either be done by
+Data files (e.g. mzML, raw) should be uploaded to the appropriate assay for a study. This can either be done by
 uploading a zip file of the data files or providing a path to the data files if the file system is available.
 
 A mapping file should be provided that links each file to sample and protocols. Each protocol has a 'code_field' to be

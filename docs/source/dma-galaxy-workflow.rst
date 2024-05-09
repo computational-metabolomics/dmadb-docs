@@ -12,10 +12,9 @@ The main source of annotation results with DMAdb come from the DMA Galaxy workfl
 
 The workflow was created to handle data coming from LC fractionation experiments with multiple types of fragmentation data (LC-MS, LC-MS/MS, DIMS and DIMSn). 
 
-Where by multiple wells of eluent (fractions) was collected whilst performed LC-MS and LC-MS/MS measurements. These fractions then underwent additional mass spectrometry analysis in the form of DIMS and DIMSn. The DIMSn consisting of multiple collision energies and multiple stage fragmentation.
+Whereby multiple wells of eluent (fractions) was collected whilst performed LC-MS and LC-MS/MS measurements. These fractions then underwent additional mass spectrometry analysis in the form of DIMS and DIMSn. The DIMSn consisting of multiple collision energies and multiple stage fragmentation.
 
-The data is derived from both a single biological sample (i.e. a pooled *Daphnia magna* sample) and an equivelent blank sample to perform blank subtraction of features (where necessary).
-
+The data is derived from both a single biological sample (i.e. a pooled *Daphnia magna* sample) and an equivalent blank sample to perform blank subtraction of features (where necessary).
 
 .. figure:: images/workflow_place_holder.svg
     
@@ -54,7 +53,7 @@ provided by the user allows permission of the Galaxy instance API to be used.
 
 Upload ISA projects to Galaxy data library (Admin only)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-If a ISA project has be created and data has been uploaded into an assay. This data can be uploaded into the Galaxy
+If an ISA project has be created and data has been uploaded into an assay. This data can be uploaded into the Galaxy
 Data libraries. If the Galaxy instance is on the same file system (or accessible by a symbolic link) then the files
 can be uploaded as symbolic links. This is useful if there is limited space available for Galaxy instance. 
 
@@ -63,7 +62,7 @@ can be uploaded as symbolic links. This is useful if there is limited space avai
 Run Workflows (Admin only)
 ''''''''''''''''''''''''''''''''''''''''''''''''''
 All workflows for each Galaxy instances can be synced with Django file system so they can be run directly from the django
-interface. In cases where there are multiple file inputs and paramaters this is not practical and not advised.
+interface. In cases where there are multiple file inputs and parameters this is not practical and not advised.
 
 .. figure:: images/galaxy4.png
 

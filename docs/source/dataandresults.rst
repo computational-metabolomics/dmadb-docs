@@ -9,9 +9,10 @@ DMA Data and Results
 Compound annotations
 *****************************
 
-All compound annotations dervied from the DMA are summarised at `dmadb.bham.ac.uk/compounds/ <https://dmadb.bham.ac.uk/compounds/>`_.
+All compound annotations derived from the DMA are summarised at `dmadb.bham.ac.uk/compounds/ <https://dmadb.bham.ac.uk/compounds/>`_.
 
-The annotations have been summarised across all of the DMA assays that have been analysed with Galaxy DMA workflow but also merged with some external annotation sources including annotation via GNPS, mzClould and annotations from NMR and GC-MS.
+The annotations have been summarised across all of the DMA assays that have been analysed with Galaxy DMA workflow but also merged with some 
+external annotation sources including annotation via GNPS, mzCloud and annotations from NMR and GC-MS.
 
 As the Deep Metabolome Annotation has only been done on one organism (*Daphnia magna*) - this section is currently only summarising the annotation for *D. magna*.  
 
@@ -62,7 +63,7 @@ The compounds are distinguished by a unique InChiKey and can filtered and search
      - DMA Solid Phase Extraction (SPE) protocol(s) the annotation observed in
    * - Spe frac
      - DMA SPE fraction the annotation observed in
-   * - Chromatogprahy
+   * - Chromatography
      - DMA chromatography protocol(s) the annotation observed in
    * - Measurement
      - DMA measurement (LCMSMS, DIMSn, GCMS, NMR) protocol(s) the annotation observed in
@@ -113,7 +114,7 @@ The raw (and .mzML) data files can be browsed, filtered and downloaded from `dma
 
 Browse analysis datasets
 **********************************************************
-The DMA Galaxy workflow outputs as a result an SQLite file for each DMA assay that has been analysed (incoporating the annotation and peak information from LC-MS, LC-MS/MS, DIMS and DIMSn data).
+The DMA Galaxy workflow outputs as a result an SQLite file for each DMA assay that has been analysed (incorporating the annotation and peak information from LC-MS, LC-MS/MS, DIMS and DIMSn data).
 
 Each of these SQLite data files can be individually inspected through the DMAdb interface from `dmadb.bham.ac.uk/dataset_summary/ <https://dmadb.bham.ac.uk/dataset_summary/>`_. 
 
@@ -130,7 +131,7 @@ First the user can select the processed data file to choose from via using the f
    * - Assay name
      - The DMA assay from which the data was derived from
    * - Polarity
-     - The mass spectrometry ionisation polarity from which the data was dervied from
+     - The mass spectrometry ionisation polarity from which the data was derived from
    * - Metabolite standard 
      - Boolean - if true, then the data and results are for a metabolite reference standard mix (e.g. the assay was used for validation purposes rather that measuring the metabolite directly in an organism)
    * - Fractionation
@@ -160,7 +161,7 @@ See below for definitions of columns:
    * - Compound name
      - Compound name of annotation
    * - Ms type
-     - Mass spectrometry type (Fractiontaion data can either be "lcms" or "dims" if from the LC fractions)
+     - Mass spectrometry type (Fractionation data can either be "lcms" or "dims" if from the LC fractions)
    * - Sid
      - Scan peak id (unique id for this dataset for the "dims" peak)
    * - Grpid 
@@ -172,25 +173,25 @@ See below for definitions of columns:
    * - Rt
      - Retention time of the peak 
    * - Well
-     - If the peak from an LC fraction, the well from which the the DIMS data was taken
+     - If the peak from an LC fraction, the well from which the DIMS data was taken
    * - Sm score
      - Spectral matching score - values between 0 to 1 (dpc)
    * - Metfrag score
      - MetFrag annotation score (weighted score - see Galaxy workflow) - values between 0 to 1
    * - Sirius score
-     - SIRIUS CSI:FingerID score (the ranking fro SIRIUS CSI:FingerID was converted to a value between 0 to 1 using a `"minmax" normalisation <https://github.com/computational-metabolomics/msPurity/blob/d32903e1bb63106158dcc4e5de3a02b2f4013d05/R/combineAnnotations.R#L291-L295>`_.)
+     - SIRIUS CSI:FingerID score (the ranking from SIRIUS CSI:FingerID was converted to a value between 0 to 1 using a `"minmax" normalisation <https://github.com/computational-metabolomics/msPurity/blob/d32903e1bb63106158dcc4e5de3a02b2f4013d05/R/combineAnnotations.R#L291-L295>`_.)
    * - Ms1 lookup score
-     - A binary score, wherer 1 signifies a match of the a calculated neutral mass to a public metabolite database and 0 signifies there was no match
+     - A binary score, where 1 signifies a match of the a calculated neutral mass to a public metabolite database and 0 signifies there was no match
    * - Biosim max score
      - A tanimoto similarity analysis between the structure of the annotated compound against a preselected list of compounds known to be from "biology" from HMDB
    * - Wscore
-     - A weighted score bteween 0 to 1 of - see the DMA Galaxy workflow for details of the weighting
+     - A weighted score between 0 to 1 of - see the DMA Galaxy workflow for details of the weighting
    * - Rank
      - A rank derived from the Wscore
    * - Adduct overall
      - All adducts used to calculate the annotation
 
-The weighted scores for "Sm score", "MetFrag score", "Sirius score", "Ms1 lookup score" and "Biosim max score" are all show in the table with the suffix **"wscore"**. See the DMA alaxy workflow for details of the weightings used.
+The weighted scores for "Sm score", "MetFrag score", "Sirius score", "Ms1 lookup score" and "Biosim max score" are all show in the table with the suffix **"wscore"**. See the DMA Galaxy workflow for details of the weightings used.
 
 
 Views of the extracted ion chromatogram and fragmentation data can also be viewed.
@@ -220,7 +221,7 @@ A registered user can search all the annotations in batch via monoisotopic exact
     
   Fig 8. Search monoisotopic exact mass of annotations
 
-The results are are stored in the `Monoisotopic exact mass search results <https://dmadb.bham.ac.uk/search_mono_param/>`_ section. 
+The results are stored in the `Monoisotopic exact mass search results <https://dmadb.bham.ac.uk/search_mono_param/>`_ section. 
 
 Where each row corresponds to batch query and the columns provide details of the parameters used for the search
 
@@ -230,7 +231,7 @@ Where each row corresponds to batch query and the columns provide details of the
 
 The individual matches from the search can then be inspected within the match table. Where each row corresponds to a single match between a query monoisotopic mass and a monoisotopic mass within the available annotations in DMAdb.
 
-The match table includes the relevant ppmdifference of the queried mass and the mass in the library, as well as all the information regarding the compound detailed in `dmadb.bham.ac.uk/compounds/ <https://dmadb.bham.ac.uk/compounds/>`_
+The match table includes the relevant ppm difference of the queried mass and the mass in the library, as well as all the information regarding the compound detailed in `dmadb.bham.ac.uk/compounds/ <https://dmadb.bham.ac.uk/compounds/>`_
 
 .. list-table:: 
    :widths: 25 50
